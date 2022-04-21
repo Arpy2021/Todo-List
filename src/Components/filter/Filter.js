@@ -13,7 +13,7 @@ function Filter() {
 
     function itemFilter (type) {
        dispatchFilter(setFilter(type))
-        // setFilter(type)
+       //  setFilter(type)
         // console.log(type, 'aaaz')
     }
 

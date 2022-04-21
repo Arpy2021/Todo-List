@@ -2,12 +2,17 @@ import style from "./list.module.scss"
 import Item from "../item/Item";
 import {useDispatch, useSelector} from "react-redux";
 import visibilityFilter from "../../redux/reducers/visibilityFilter";
-import {removeToDo, setFilter,editToDo} from "../../redux/actions";
+import {removeToDo,editToDo} from "../../redux/actions";
 // import {getToDoFilterType} from  "../../redux/reducers/selector"
 import todos from "../../redux/reducers/todos";
 import {FILTER_TYPE} from "../../constants/constType";
 
 function List() {
+    // et arr = [5,8,3,4]
+    //
+    // let ar = arr.map((num) =>{ num + arr.length)
+    //     console.log(ar)l
+
     const dispatch = useDispatch()
     const {visibilityFilter, todos } = useSelector(state => state)
       //   const filterTodos = getToDoFilterType(visibilityFilter, todos)
@@ -33,7 +38,7 @@ function List() {
                 return <Item
                     key={todo.id}
                     id={todo.id}
-                    todo={filteredList}
+                    todo={todos}
                     todos={todos}
                     task={todo.task}
                     removeToDo={() => dispatch(removeToDo(todo))}

@@ -13,7 +13,7 @@ export const addTodo = task=> ({
 
 export const toggleToDo = id => ({
     type: TOGGLE_TODO,
-    payload: { id }
+    payload:{id}
 })
 
 
